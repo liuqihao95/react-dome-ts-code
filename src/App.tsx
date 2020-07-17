@@ -1,12 +1,13 @@
 import React from 'react'
-import { Button } from 'antd'
 
+import { renderRoutes } from '@/utils/renderRoute'
 import '@/App.less'
+import routes from '@/router'
 
 function App () {
   return (
     <div className="App">
-      <Button type='primary'>ll</Button>
+      {renderRoutes(routes)}
     </div>
   )
 }

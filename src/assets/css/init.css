@@ -1,0 +1,30 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+.clear-fix::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+.flr{
+  float: right;
+}
+.fll{
+  float: left;
+}
+.relative {
+  position: relative;
+}
+.tar {
+  text-align: right;
+}
+.tac {
+  text-align: center;
+}
+.tal {
+  text-align: left;
+}
