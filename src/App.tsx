@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'antd'
 
-import '@components/App.less'
+import '@/App.less'
 
 function App () {
   return (
