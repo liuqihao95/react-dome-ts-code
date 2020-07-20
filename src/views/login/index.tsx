@@ -17,8 +17,8 @@ export default class Login extends PureComponent<TsProps, TsState> {
   state: any = {
     params: {
       Language: 'zh',
-      Name: '',
-      Password: ''
+      Name: 'liu_rui@siemens.com',
+      Password: '12345678'
     },
     clickedLogin: false
   }
@@ -35,12 +35,10 @@ export default class Login extends PureComponent<TsProps, TsState> {
     } else if (!this.state.params.Password) {
       message.error('Please enter password')
     } else {
-      const res = await loginApi.login(this.state.params)
+      const res = await loginApi.SFLLLogin(this.state.params)
       if (res.data.Success) {
-        window.sessionStorage.roles = res.data.Menus.join(',')
-        window.sessionStorage.IsAdmin = res.data.IsAdmin
-        window.sessionStorage.userName = res.data.Display
-        this.props.history.push({ pathname: '/main', state: { day: 'Friday' } })
+        window.sessionStorage.userInfo = res.data
+        this.props.history.push({ pathname: '/layout', state: { day: 'Friday' } })
       }
     }
   }

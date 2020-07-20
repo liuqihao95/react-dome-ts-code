@@ -10,7 +10,7 @@ function post (api: string) {
 }
 
 export const loginApi = {
-  getSystemName: get('SystemConfig/GetSystemName'),
-  getVCode: get('Account/GetVCode'),
-  login: post('account/login')
+  SFLLLogin: post('/Account/SFLLLogin'),
+  SFLLADLogin2: post('/Account/SFLLADLogin'),
+  SFLLADLogin: get('/Account/Get')
 }
